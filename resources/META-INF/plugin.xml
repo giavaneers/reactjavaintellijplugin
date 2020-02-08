@@ -1,6 +1,6 @@
 <idea-plugin>
     <id>io.reactjava.reactjava-lang</id>
-    <version>SNAPSHOT-1.200208.1</version>
+    <version>SNAPSHOT-1.200208.2</version>
     <name>ReactJava</name>
     <vendor
        email="support@giavaneers.com"
@@ -75,10 +75,6 @@
        <listener
           class="io.reactjava.plugins.intellij.PluginStartup"
           topic="com.intellij.openapi.project.impl.ProjectLifecycleListener"
-       />
-       <listener
-          class="io.reactjava.plugins.intellij.PluginStartup"
-          topic="com.intellij.openapi.project.impl.ProjectManagerListener"
        />
     </applicationListeners>
 
