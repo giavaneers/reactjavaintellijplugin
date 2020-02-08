@@ -1,0 +1,18 @@
+/*
+    Template bnf file for automatic ReactJava parser generation.
+    @status Not-In-Use
+ */
+{
+    parserClass="com.giavaneers.reactjava.ReactJavaParser"
+
+    extends="com.intellij.extapi.psi.ASTWrapperPsiElement"
+
+    psiClassPrefix="ReactJava"
+    psiImplClassSuffix="Impl"
+    psiPackage="com.giavaneers.reactjava.psi"
+    psiImplPackage="com.giavaneers.reactjava.psi.impl"
+
+    elementTypeHolderClass="com.giavaneers.reactjava.lexer.ILexerTypes"
+    elementTypeClass="com.giavaneers.reactjava.psi.ReactJavaElementType"
+    tokenTypeClass="com.giavaneers.reactjava.psi.ReactJavaTokenType"
+}

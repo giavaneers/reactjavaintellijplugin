@@ -1,0 +1,88 @@
+<idea-plugin>
+    <id>io.reactjava.reactjava-lang</id>
+    <version>SNAPSHOT-1.200208.1</version>
+    <name>ReactJava</name>
+    <vendor
+       email="support@giavaneers.com"
+       url="http://www.giavaneers.com/platforms#reactjava">
+       Giavaneers
+    </vendor>
+
+    <change-notes>
+       Fixes a few uses of API's deprecated in 2020.1.
+    </change-notes>
+
+     <description>
+        <![CDATA[
+        <p>
+           Development support for
+           <a href="http://www.giavaneers.com/platforms#reactjava">ReactJava</a>
+           projects.
+        </p>
+        <h2>Getting started</h2>
+        <ul>
+        <li>Read the Getting Started section of the
+           <a href="https://storage.googleapis.com/reactjava.io/docs/UserGuide/ReactJavaDeveloperGuide.pdf">
+              React Java Developer Guide
+           </a>
+        </li>
+        </ul>
+        <h2>Features</h2>
+        <ul>
+        <li>Syntax highlighting for ReactJava files</li>
+        <li>Code completion for ReactJava files</li>
+        </ul>
+        <p>
+           Find more information about
+           <a href="http://www.reactjava.io">ReactJava</a>.
+        </p>
+        <p>
+        <p>
+           Please report any issues to
+           <a href="mailto://support@giavaneers.com">Giavaneers Support</a>.
+        </p>
+        <p></p>
+        <p>Originally developed by L. Brian McGann.</p>
+        <p>Contributors include</p>
+           <ul>
+              <li>Alex Radovan</li>
+              <li>Isabella Dyc-O'Neal</li>
+              <li>Ayush Garg</li>
+              <li>Ethan ElShyeb</li>
+           </ul>
+         ]]>
+      </description>
+
+    <!-- IU needed for dependence on Intellij Ultimate plugins such as CSS support. -->
+    <!-- Building with 2019.3 SDK  -->
+    <idea-version since-build="IU-193" />
+
+    <depends>com.intellij.modules.lang</depends>
+    <depends>com.intellij.modules.java</depends>
+    <depends>com.intellij.css</depends>
+
+    <extensions defaultExtensionNs="com.intellij">
+        <lang.fileViewProviderFactory
+           implementationClass="io.reactjava.plugins.intellij.psi.ReactJavaFileViewProviderFactory"
+           language="JAVA"
+        />
+       <highlightInfoPostFilter
+          implementation="io.reactjava.plugins.intellij.inspection.ReactJavaHighlightInfoPostFilter"
+       />
+    </extensions>
+
+    <applicationListeners>
+       <listener
+          class="io.reactjava.plugins.intellij.PluginStartup"
+          topic="com.intellij.openapi.project.impl.ProjectLifecycleListener"
+       />
+       <listener
+          class="io.reactjava.plugins.intellij.PluginStartup"
+          topic="com.intellij.openapi.project.impl.ProjectManagerListener"
+       />
+    </applicationListeners>
+
+    <actions>
+        <!-- Add your actions here -->
+    </actions>
+</idea-plugin>
